@@ -216,7 +216,8 @@ class PostListViewController: AbstractPostListViewController, UIViewControllerRe
     override func configureTableView() {
         tableView.accessibilityIdentifier = "PostsTable"
         tableView.isAccessibilityElement = true
-        tableView.estimatedRowHeight = postCardEstimatedRowHeight
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = type(of: self).postCardEstimatedRowHeight
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
 
