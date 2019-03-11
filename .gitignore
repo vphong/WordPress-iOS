@@ -75,6 +75,7 @@ Scripts/fastlane/report.xml
 Scripts/fastlane/README.md
 Scripts/Preview.html
 Scripts/fastlane/test_output/
+Scripts/fastlane/promo_screenshots
 
 # Generated Internal Icons
 /WordPress/Resources/MurielImages.xcassets/AppIcon-Internal.appiconset
