@@ -1,13 +1,14 @@
 version: 2.1
 
 orbs:
-  ios: wordpress-mobile/ios@0.0.20
+  ios: wordpress-mobile/ios@dev:dedup-params
 
 workflows:
   wordpress_ios:
     jobs:
       - ios/test:
           name: build_and_test
+          xcode-version: "10.1.0"
           workspace: WordPress.xcworkspace
           scheme: WordPress
           device: iPhone XS
