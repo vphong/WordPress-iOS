@@ -26,10 +26,10 @@ def aztec
     ## When using a tagged version, feel free to comment out the WordPress-Aztec-iOS line below.
     ## When using a commit number (during development) you should provide the same commit number for both pods.
     ##
-    #pod 'WordPress-Aztec-iOS', :git => 'https://github.com/wordpress-mobile/AztecEditor-iOS.git', :commit => 'a916afc713e5d650f47fd03772022c01ca0ac8a8'
+    pod 'WordPress-Aztec-iOS', :git => 'https://github.com/wordpress-mobile/AztecEditor-iOS.git', :commit => 'a7ccb0f9825641c43c0f9a5afd653bca2c68657f'
     #pod 'WordPress-Editor-iOS', :git => 'https://github.com/wordpress-mobile/AztecEditor-iOS.git', :commit => 'a916afc713e5d650f47fd03772022c01ca0ac8a8'
     ##pod 'WordPress-Editor-iOS', :git => 'https://github.com/wordpress-mobile/AztecEditor-iOS.git', :tag => '1.5.0.beta.1'
-    pod 'WordPress-Editor-iOS', '1.5.2'
+    # pod 'WordPress-Editor-iOS', '1.5.2'
 end
 
 def wordpress_ui
@@ -121,7 +121,7 @@ target 'WordPress' do
     pod 'Starscream', '3.0.6'
     pod 'SVProgressHUD', '2.2.5'
     pod 'ZendeskSDK', '2.2.0'
-
+    pod 'ZIPFoundation', '~> 0.9.8'
 
     ## Automattic libraries
     ## ====================
@@ -133,9 +133,9 @@ target 'WordPress' do
     ## while PR is in review:
     ## pod 'WPMediaPicker', :git => 'https://github.com/wordpress-mobile/MediaPicker-iOS.git', :commit => 'e546205cd2a992838837b0a4de502507b89b6e63'
 
-    pod 'WordPressAuthenticator', '~> 1.2.0'
-    #pod 'WordPressAuthenticator', :path => '../WordPressAuthenticator-iOS'
-    #pod 'WordPressAuthenticator', :git => 'https://github.com/wordpress-mobile/WordPressAuthenticator-iOS.git' , :commit => '867fa63'
+    # pod 'WordPressAuthenticator', '~> 1.2.0'
+    # pod 'WordPressAuthenticator', :path => '../WordPressAuthenticator-iOS'
+    pod 'WordPressAuthenticator', :git => 'https://github.com/wordpress-mobile/WordPressAuthenticator-iOS.git' , :commit => 'dd28280d83e16717f38fdf91917e9575304289cc'
 
 
     aztec
@@ -158,7 +158,6 @@ target 'WordPress' do
         shared_with_all_pods
         shared_with_networking_pods
         wordpress_ui
-        pod 'ZIPFoundation', '~> 0.9.8'
     end
 
 
@@ -231,12 +230,23 @@ target 'WordPressComStatsiOS' do
     ## ====================
     ##
     wordpress_ui
+end
 
-    target 'WordPressComStatsiOSTests' do
-        inherit! :search_paths
-
-        shared_test_pods
-    end
+## WordPress.com Stats Tests
+## =========================
+##
+target 'WordPressComStatsiOSTests' do
+  project 'WordPressComStatsiOS/WordPressComStatsiOS.xcodeproj'
+  
+  shared_with_all_pods
+  shared_with_networking_pods
+  
+  ## Automattic libraries
+  ## ====================
+  ##
+  wordpress_ui
+  
+  shared_test_pods
 end
 
 ## Screenshot Generation
