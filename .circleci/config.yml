@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ios: wordpress-mobile/ios@0.0.24
+  ios: wordpress-mobile/ios@dev:cache-rome
 
 workflows:
   wordpress_ios:
@@ -14,4 +14,4 @@ workflows:
           device: iPhone XS
           ios-version: "12.2"
           # If you want to reset the CircleCI cache, increment the number in the cache prefix below
-          cache-prefix: dependency-cache-v1
+          cache-prefix: rome-dependency-cache-v1
