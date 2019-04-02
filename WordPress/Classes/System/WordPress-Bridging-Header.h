@@ -2,6 +2,13 @@
 #import <UIDeviceIdentifier/UIDeviceHardware.h>
 #import <NSObject_SafeExpectations/NSDictionary+SafeExpectations.h>
 
+//@import WordPressAuthenticator;
+//@import WordPressUI;
+//@import WordPressKit;
+//
+////#import <WordPressAuthenticator/WordPressAuthenticator.h>
+////#import <WordPressAuthenticator/WordPressAuthenticator-Swift.h>
+
 // WordPress Module
 
 #import "ActivityLogViewController.h"
@@ -133,3 +140,6 @@
 #import <WordPressShared/WPTableViewCell.h>
 #import <WordPressShared/WPAnalytics.h>
 #import <WordPressUI/UIImage+Util.h>
+
+#import <WordPressAuthenticator/WordPressAuthenticator.h>
+#import <WordPressAuthenticator/WordPressAuthenticator-Swift.h>

@@ -32,6 +32,7 @@
 #import "ApiCredentials.h"
 
 // Swift support
+//@import WordPressUI;
 #import "WordPress-Swift.h"
 
 // View controllers

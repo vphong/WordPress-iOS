@@ -1,6 +1,6 @@
 import UIKit
 import WordPressAuthenticator
-
+import WordPressKit
 
 extension FancyAlertViewController {
 
@@ -26,7 +26,7 @@ extension FancyAlertViewController {
                 submitButton?.showActivityIndicator(false)
 
                 var localError = VerificationFailureError.unknown
-                if  (error as NSError).domain == WordPressComRestApiErrorDomain {
+                if  (error as NSError).domain == "WordPressComRestApiErrorDomain" {
                     localError = .alreadyVerified
                 }
                 // if we hit a bad edge-case where the user hits a "resend email" button, but they've already verified

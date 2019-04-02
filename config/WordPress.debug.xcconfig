@@ -1,1 +1,3 @@
 #include "Version.internal.xcconfig"
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(SRCROOT)/../Rome
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/../Rome/**
