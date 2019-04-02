@@ -52,6 +52,9 @@ GEM
       nap
     cocoapods-repo-update (0.0.3)
       cocoapods (~> 1.0, >= 1.3.0)
+    cocoapods-rome (1.0.1)
+      cocoapods (>= 1.1.0, < 2.0)
+      fourflusher (~> 2.0)
     cocoapods-search (1.0.0)
     cocoapods-stats (1.1.0)
     cocoapods-trunk (1.3.1)
@@ -220,6 +223,7 @@ PLATFORMS
 DEPENDENCIES
   cocoapods (= 1.6.1)!
   cocoapods-repo-update (~> 0.0.3)!
+  cocoapods-rome!
   dotenv!
   fastlane (= 2.103.1)!
   fastlane-plugin-wpmreleasetoolkit!

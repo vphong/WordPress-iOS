@@ -7,6 +7,7 @@ platform :ios, '10.0'
 workspace 'WordPress.xcworkspace'
 
 plugin 'cocoapods-repo-update'
+plugin 'cocoapods-rome'
 
 ## Pods shared between all the targets
 ## ===================================
@@ -115,7 +116,7 @@ target 'WordPress' do
     pod 'Crashlytics', '3.12.0'
     pod 'Gifu', '3.2.0'
     pod 'GiphyCoreSDK', '~> 1.4.0'
-    pod 'HockeySDK', '5.1.4', :configurations => ['Release-Internal', 'Release-Alpha']
+    # pod 'HockeySDK', '5.1.4', :configurations => ['Release-Internal', 'Release-Alpha']
     pod 'MGSwipeTableCell', '1.6.8'
     pod 'MRProgress', '0.8.3'
     pod 'Starscream', '3.0.6'
@@ -140,122 +141,122 @@ target 'WordPress' do
 
     aztec
     wordpress_ui
-    target 'WordPressTest' do
-        inherit! :search_paths
+    # target 'WordPressTest' do
+    #     inherit! :search_paths
 
-        shared_test_pods
-        pod 'Nimble', '~> 7.3.1'
-    end
-
-
-    ## Share Extension
-    ## ===============
-    ##
-    target 'WordPressShareExtension' do
-        inherit! :search_paths
-
-        aztec
-        shared_with_all_pods
-        shared_with_networking_pods
-        wordpress_ui
-    end
+    #     shared_test_pods
+    #     pod 'Nimble', '~> 7.3.1'
+    # end
 
 
-    ## DraftAction Extension
-    ## =====================
-    ##
-    target 'WordPressDraftActionExtension' do
-        inherit! :search_paths
+    # ## Share Extension
+    # ## ===============
+    # ##
+    # target 'WordPressShareExtension' do
+    #     inherit! :search_paths
 
-        aztec
-        shared_with_all_pods
-        shared_with_networking_pods
-        wordpress_ui
-    end
+    #     aztec
+    #     shared_with_all_pods
+    #     shared_with_networking_pods
+    #     wordpress_ui
+    # end
 
 
-    ## Today Widget
-    ## ============
-    ##
-    target 'WordPressTodayWidget' do
-        inherit! :search_paths
+    # ## DraftAction Extension
+    # ## =====================
+    # ##
+    # target 'WordPressDraftActionExtension' do
+    #     inherit! :search_paths
 
-        shared_with_all_pods
-        shared_with_networking_pods
-    end
+    #     aztec
+    #     shared_with_all_pods
+    #     shared_with_networking_pods
+    #     wordpress_ui
+    # end
+
+
+    # ## Today Widget
+    # ## ============
+    # ##
+    # target 'WordPressTodayWidget' do
+    #     inherit! :search_paths
+
+    #     shared_with_all_pods
+    #     shared_with_networking_pods
+    # end
 end
 
 
 
-## Notification Content Extension
-## ==============================
-##
-target 'WordPressNotificationContentExtension' do
-    project 'WordPress/WordPress.xcodeproj'
+# ## Notification Content Extension
+# ## ==============================
+# ##
+# target 'WordPressNotificationContentExtension' do
+#     project 'WordPress/WordPress.xcodeproj'
 
-    inherit! :search_paths
+#     inherit! :search_paths
 
-	wordpress_kit
-    wordpress_shared
-    wordpress_ui
-end
-
-
-
-## Notification Service Extension
-## ==============================
-##
-target 'WordPressNotificationServiceExtension' do
-    project 'WordPress/WordPress.xcodeproj'
-
-    inherit! :search_paths
-
-    wordpress_kit
-    wordpress_shared
-    wordpress_ui
-end
+# 	wordpress_kit
+#     wordpress_shared
+#     wordpress_ui
+# end
 
 
 
-## WordPress.com Stats
-## ===================
-##
-target 'WordPressComStatsiOS' do
-    project 'WordPressComStatsiOS/WordPressComStatsiOS.xcodeproj'
+# ## Notification Service Extension
+# ## ==============================
+# ##
+# target 'WordPressNotificationServiceExtension' do
+#     project 'WordPress/WordPress.xcodeproj'
 
-    shared_with_all_pods
-    shared_with_networking_pods
+#     inherit! :search_paths
 
-    ## Automattic libraries
-    ## ====================
-    ##
-    wordpress_ui
-end
+#     wordpress_kit
+#     wordpress_shared
+#     wordpress_ui
+# end
 
-## WordPress.com Stats Tests
-## =========================
-##
-target 'WordPressComStatsiOSTests' do
-  project 'WordPressComStatsiOS/WordPressComStatsiOS.xcodeproj'
+
+
+# ## WordPress.com Stats
+# ## ===================
+# ##
+# target 'WordPressComStatsiOS' do
+#     project 'WordPressComStatsiOS/WordPressComStatsiOS.xcodeproj'
+
+#     shared_with_all_pods
+#     shared_with_networking_pods
+
+#     ## Automattic libraries
+#     ## ====================
+#     ##
+#     wordpress_ui
+# end
+
+# ## WordPress.com Stats Tests
+# ## =========================
+# ##
+# target 'WordPressComStatsiOSTests' do
+#   project 'WordPressComStatsiOS/WordPressComStatsiOS.xcodeproj'
   
-  shared_with_all_pods
-  shared_with_networking_pods
+#   shared_with_all_pods
+#   shared_with_networking_pods
   
-  ## Automattic libraries
-  ## ====================
-  ##
-  wordpress_ui
+#   ## Automattic libraries
+#   ## ====================
+#   ##
+#   wordpress_ui
   
-  shared_test_pods
-end
+#   shared_test_pods
+# end
 
-## Screenshot Generation
-## ===================
-##
-target 'WordPressScreenshotGeneration' do
-    project 'WordPress/WordPress.xcodeproj'
+# ## Screenshot Generation
+# ## ===================
+# ##
+# target 'WordPressScreenshotGeneration' do
+#     project 'WordPress/WordPress.xcodeproj'
 
-    inherit! :search_paths
+#     inherit! :search_paths
 
-    pod 'SimulatorStatusMagic'
-end
+#     pod 'SimulatorStatusMagic'
+# end
