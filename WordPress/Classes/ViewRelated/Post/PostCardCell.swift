@@ -188,6 +188,8 @@ class PostCardCell: UITableViewCell, ConfigurablePostView {
         if let titleForDisplay = post.titleForDisplay() {
             WPStyleGuide.applyPostTitleStyle(titleForDisplay, into: titleLabel)
         }
+
+        self.accessibilityIdentifier = post.slugForDisplay()
     }
 
     private func configureSnippet() {
