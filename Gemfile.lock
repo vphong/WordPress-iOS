@@ -1,9 +1,11 @@
 GIT
   remote: https://github.com/wordpress-mobile/release-toolkit
-  revision: c555066402074a527a9853932790da8198eb7f21
-  tag: 0.6.0
+  revision: 811042c73a92d47a4c2ca79fa8d5a704f4dc00e4
+  branch: add/screenshot-tool-updates-for-woo
   specs:
     fastlane-plugin-wpmreleasetoolkit (0.6.0)
+      activesupport (~> 4)
+      chroma (= 0.2.0)
       diffy (~> 3.3)
       git (~> 1.3)
       jsonlint
@@ -27,6 +29,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     atomos (0.1.3)
     babosa (1.0.2)
+    chroma (0.2.0)
     claide (1.0.2)
     cocoapods (1.6.1)
       activesupport (>= 4.0.2, < 5)
@@ -266,4 +269,4 @@ DEPENDENCIES
   xcpretty-travis-formatter!
 
 BUNDLED WITH
-   1.17.3
+   2.0.1
